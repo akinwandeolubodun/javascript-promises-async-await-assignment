@@ -45,3 +45,9 @@
 
 
 //END OF ASSIGNMENT
+
+async function getCatFacts(USER_INPUT) {
+      let response = await fetch(`https://catfact.ninja/facts?limit=${USER_INPUT}`);
+      let json = await response.json();
+      return json; 
+}
