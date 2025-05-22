@@ -46,8 +46,22 @@
 
 //END OF ASSIGNMENT
 
+
 async function getCatFacts(USER_INPUT) {
-      let response = await fetch(`https://catfact.ninja/facts?limit=${USER_INPUT}`);
+      let url = `https://catfact.ninja/facts?limit=${USER_INPUT}`;
+      let response = await fetch(url);
       let json = await response.json();
       return json; 
 }
+// async function getCatFacts(USER_INPUT) {
+//       let response = await fetch({'https://catfact.ninja/facts?limit=USER_INPUT':});
+//       let json = await response.json();
+//       return json; 
+// } from class but not working
+
+// async function getCatFacts(USER_INPUT) {
+//   const url = `https://catfact.ninja/facts?limit=${USER_INPUT}`;
+//   const response = await fetch(url);
+//   const json = await response.json();
+//   return json;
+// }The above corrected and from CHATgpt
